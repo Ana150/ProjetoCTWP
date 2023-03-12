@@ -10,6 +10,6 @@ else:
 if coupon == "y":
    withCoupon = discount - couponValue
    print(f'You will pay: {int(withCoupon)}')
-   
+
 else:
    print(f'You will pay: {int(discount)}')
