@@ -1,14 +1,13 @@
 value = int(input("Insert the value: "))
 coupon = input("Do you have a coupon (y/n): ")
-couponValue = int(20)
 
 if value > 500:
-    discount = value * 0.80
-else:
     discount = value * 0.88
+else:
+    discount = value * 0.94
 
-if coupon == "y":
-   withCoupon = discount - couponValue
+if coupon == "y" or coupon == "Y":
+   withCoupon = discount - 20
    print(f'You will pay: {int(withCoupon)}')
 
 else:

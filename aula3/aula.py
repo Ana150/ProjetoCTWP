@@ -45,6 +45,7 @@ else:
 if venda > 500:
     desconto = venda * 0.88
     print((f'You will pay: {desconto}'))
+    
 else:
     desconto = venda * 0.94
     print(f'You will pay: {desconto}')'''
