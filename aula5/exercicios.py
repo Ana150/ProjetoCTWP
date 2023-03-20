@@ -78,12 +78,24 @@ Novo salário...............: R$ {resultado:8.2f}""")
 '''
 #INSS CARTA
 
-quantEmpregos = input("Você possuí dois empregos?: ")
+teto = False
+inss2 = 0
+qtd_empr = int(input("Quantidade de empregos: "))
 
-salario = float(input("Insira o salário: "))
-if quantEmpregos == "s" or quantEmpregos == "sim":
-    salario = float(input("Insira o salário do segundo emprego: "))
-
-possuiCarta = float(input("Possuí carta (s/n): "))
-
-
+if qtd_empr > 1:
+    sal = float(input("Digite o seu salário: R$ "))
+if sal <= 1302:
+    inss = sal * 0.07
+elif sal <= 2571.29:
+    inss = sal * 0.09
+elif sal <= 3856.94:
+    inss = sal * 0.12
+elif sal <= 7507.49:
+    inss = sal * 0.14
+else:        # paga no teto
+    teto = True
+    inss = 1051.05
+    if teto == True:
+        #nao cobrar o inss do segundo emprego
+        inss2 = 0
+        sal2 = float(input("Digite o seu salário 2: R$ "))    else:        # cobrar o inss do segundo emprego        sal2 = float(input("Digite o seu salário 2: R$ "))        if sal2 <= 1302:            inss2 = sal * 0.07        elif sal2 <= 2571.29:            inss2 = sal * 0.09        elif sal2 <= 3856.94:            inss2 = sal * 0.12        elif sal2 <= 7507.49:            inss2 = sal * 0.14        else:            # paga no teto            inss2 = 1051.05    # Cálculo do salário líquido    sal_liq = sal + sal2 - inss - inss2    # Exibição das informações    print(f"""            Salário..........: R$ {sal:8.2f}            Salário 2........: R$ {sal2:8.2f}            INSS.............: R$ {inss:8.2f}            INSS 2...........: R$ {inss2:8.2f}            Salário Líquido..: R$ {sal_liq:8.2f}        """)else:    sal = float(input("Digite o seu salário: R$ "))    if sal <= 1302:        inss = sal * 0.07    elif sal <= 2571.29:        inss = sal * 0.09    elif sal <= 3856.94:        inss = sal * 0.12    elif sal <= 7507.49:        inss = sal * 0.14    else:        inss = 1051.05    # Cálculo do salário líquido    sal_liq = sal - inss    # Exibição das informações    print(f"""        Salário..........: R$ {sal:8.2f}        INSS.............: R$ {inss:8.2f}        Salário Líquido..: R$ {sal_liq:8.2f}    """)
