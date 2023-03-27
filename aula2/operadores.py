@@ -1,6 +1,5 @@
 '''
 OPERADORES MATEMÁTICO
-
 '''
 
 valor1 = 10
