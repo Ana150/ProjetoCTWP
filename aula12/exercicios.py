@@ -42,6 +42,7 @@ def fatorial(numero1) -> None:
         count = count + 1
 
     print(resultado)
+
 #EXERCÍCIO 6
 def primo(numero1) -> None:
     if numero1 >= 1:
@@ -54,5 +55,5 @@ def primo(numero1) -> None:
 
 #numeros(1,10)
 #abertoFechado(1,10,"F")
-fatorial(5)
+#fatorial(5)
 primo(5)
