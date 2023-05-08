@@ -104,17 +104,20 @@ while True:
         case 3:
             c3 = c3 + 1
         case _:
+            print("Voto inálido!")
             c4 = c4 + 1
 
     soma = c1+c2+c3+c4
-    percentual1 = (soma * 100) / c1
-    percentual2 = (soma * 100) / c2
-    percentual3 = (soma * 100) / c3
-    percentual4 = (soma * 100) / c4
-    print(f"""
-    1 - HUGUINHO - {c1} votos -> O candidato conseguiu {int(percentual1)}% dos votos
-    2 - ZEZINHO  - {c2} votos -> O candidato conseguiu {int(percentual2)}% dos votos
-    3 - LUIZINHO - {c3} votos -> O candidato conseguiu {int(percentual3)}% dos votos
-    4 - NULO     - {c4} votos -> O candidato conseguiu {int(percentual4)}% dos votos
-    """)
+
+    percentual1 = (soma * (c1 / 100))
+    percentual2 = (c2 / 100) * soma
+    percentual3 = (c3 / 100) * soma
+    percentual4 = (c4 / 100) * soma
+
+print(f"""
+1 - HUGUINHO - {c1} votos -> O candidato conseguiu {float(percentual1)}% dos votos
+2 - ZEZINHO  - {c2} votos -> O candidato conseguiu {percentual2}% dos votos
+3 - LUIZINHO - {c3} votos -> O candidato conseguiu {percentual3}% dos votos
+4 - NULO     - {c4} votos -> O candidato conseguiu {percentual4}% dos votos
+""")
 

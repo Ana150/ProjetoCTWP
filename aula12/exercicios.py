@@ -18,7 +18,7 @@
     > > 21
 '''
 
-#EXERCÍCIO 1
+'''#EXERCÍCIO 1
 #EM PROCEDIMENTO PODEMOS USAR PRINT E INPUT, EM UM FUNÇÃO NÃO!
 def numeros(numero1, numero2) -> None:
     for i in range(numero1, numero2 + 1, 1):
@@ -49,7 +49,7 @@ numeros(1,10)
 print("")
 abertoFechado(1,10,"F")
 print("")
-fatorial(5)
+fatorial(5)'''
 
 #CORREÇÃO
 def intervalo(inicio: int, fim:int) -> None:
