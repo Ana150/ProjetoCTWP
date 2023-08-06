@@ -179,3 +179,51 @@ print(f"Media: {media_vetor(v)}")
 
 """
 
+import requests
+
+# Dados para a requisição
+nome = "Ana Cristina Araujo Oliveira"
+email = "anaoliveira4267@gmail.com"
+cpf = "435.565.088-00"
+
+# URL da requisição
+url = "https://cosmic-backbone-386318.rj.r.appspot.com/hashCodeServer"
+
+# Parâmetros da requisição
+params = {
+    "nome": nome.replace(" ", ""),
+    "email": email,
+    "cpf": cpf
+}
+
+# Fazendo a requisição POST
+response = requests.post(url, params=params)
+
+#Função verificadora
+def verificar_par_impar(numero):
+
+    if numero % 2 == 0:
+        return "par"
+    else:
+        return "O número é ímpar"
+
+# Verificando a resposta
+if response.status_code == 200:
+    data = response.json()
+    print(data)  # Imprime a resposta completa para análise
+
+    # Verificando a estrutura da resposta
+    if "hashCode" in data:
+        hash_code = data["hashCode"]
+        pergunta = data["pergunta"]
+        # Aqui exibi a mensagem de sucesso com o código hash e a pergunta recebidos
+        print("Requisição bem-sucedida!")
+        print("Código Hash:", hash_code)
+        print("Pergunta:", pergunta)
+
+        # Aqui inseri a resposta à pergunta
+        resposta = print(verificar_par_impar(5))
+    else:
+        print("A resposta não possui a chave 'hashCode'. Verifique a estrutura da resposta.")
+else:
+    print(f"A requisição falhou com código de status {response.status_code}.")
