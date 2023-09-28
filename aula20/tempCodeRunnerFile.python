@@ -1,0 +1,12 @@
+# Gerenciados de contexto - with
+"""
+Sintaxe:
+with open(<arq_fisico>, <modo_abertura>) as arq:
+    <manipulação do arquivo>
+
+"""
+with open("arq3.txt", "w+", encoding="Utf-8") as arq:
+    arq.write("Testando a gravação do arquivo com with.")
+
+print("Arquivo gravado com sucesso!")
+    

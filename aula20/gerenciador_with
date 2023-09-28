@@ -1,0 +1,38 @@
+# Gerenciados de contexto - with
+"""
+Sintaxe:
+with open(<arq_fisico>, <modo_abertura>) as arq:
+    <manipulação do arquivo>
+
+"""
+with open("arq3.txt", "w+", encoding="Utf-8") as arq:
+    arq.write("Testando a gravação do arquivo com with.")
+
+print("Arquivo gravado com sucesso!")
+
+"""
+EXERCÍCIO:
+- Fazer um programa que permita ao usuário digitar diversas linhas e gravá-las em um arquivo.
+-------------------------------
+hoje esta frio aqui.
+Estamos treinando para o checkpoint.
+Quando será? eu, particularmente, nao me recordo.
+-------------------------------
+
+- Ler o arquivo e contar quantas linhas existem nele
+3
+
+- Quantas palavras existem nele
+16
+
+- Quantos caracteres existem nele
+104
+
+- Quantos caracteres tirando a pontuação e espaço existentes nele
+
+-------------------------------
+hoje esta frio aqui Estamos treinando para checkpoint Quando será particularmente nao recordo
+-------------------------------
+85
+
+"""
