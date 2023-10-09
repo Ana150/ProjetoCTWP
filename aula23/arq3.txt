@@ -1,0 +1,4 @@
+Gravação da lista bruta: ['Edson', 49, 'Rua tal']
+Nome........: Edson
+Idade.......: 49
+Endereço....: Rua tal

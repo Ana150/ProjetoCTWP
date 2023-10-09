@@ -1,0 +1,6 @@
+Gravação o dicionário de forma bruta: 
+{'nome': 'Edson de Oliveira', 'idade': 49, 'endereco': 'Rua tal'}
+Nome........: Edson de Oliveira
+Idade.......: 49
+Endereço....: Rua tal
+inserindo uma nova linha
